@@ -1,12 +1,12 @@
 # Pipelines
-Project: Create a CI/CD Pipeline with GitHub Actions  Objective: Automate the build, test, and deployment processes for your web application using GitHub Actions.
+> Project: Create a CI/CD Pipeline with GitHub Actions  Objective: Automate the build, test, and deployment processes for your web application using GitHub Actions.
 
 ## Step 1: Set Up the Web Application
 
-Choose a web application or create a sample web application project. You can use any programming language and framework of your choice.
-Initialize a Git repository for your project if you haven't already.
-Create a Dockerfile for containerization (optional but recommended).
-Ensure your application has a clear folder structure and includes necessary configuration files.
+> Choose a web application or create a sample web application project. You can use any programming language and framework of your choice.
+> Initialize a Git repository for your project if you haven't already.
+> Create a Dockerfile for containerization (optional but recommended).
+> Ensure your application has a clear folder structure and includes necessary configuration files.
 
 ## Step 2: Configure GitHub Repository
 
