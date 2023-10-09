@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: latest
           cache: 'npm'
-          cache-dependency-path: subdir/package-lock.json
+          cache-dependency-path: Pipelines/package-lock.json
       - run: npm ci
       
       - name: Build & push Docker image
