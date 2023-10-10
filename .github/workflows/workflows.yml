@@ -18,7 +18,7 @@ jobs:
       
       - uses: c-hive/gha-npm-cache@v1
         with:
-          directory: Pipelines
+          directory: Pipelines/package-lock.json
 
       - name: Install JS dependencies
         run: npm install
