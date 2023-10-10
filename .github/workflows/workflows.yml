@@ -19,7 +19,7 @@ jobs:
       - name: actions/setup-node
         uses: actions/setup-node@v1.4.1
         with:
-          node-version: latest
+          node-version: "latest"
       - name: npm install
         uses: jaid/action-npm-install@v1.2.1
       
