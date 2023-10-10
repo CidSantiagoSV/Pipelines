@@ -16,8 +16,19 @@ jobs:
     steps:
       - name: actions/checkout
         uses: actions/checkout@v2.0.0
+      
+      - uses: actions/setup-node@v1.4.1
       - name: actions/setup-node
-        uses: actions/setup-node@v1.4.1
+        run: |
+          # disable command workflow processing
+          echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
+
+          # log untrusted output
+          echo "untrusted output"
+
+          # enable workflow command processing
+          echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
+
       - name: npm install
         uses: jaid/action-npm-install@v1.2.1
       
