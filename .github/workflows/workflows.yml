@@ -14,21 +14,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      
-      - uses: c-hive/gha-npm-cache@v1
+      - name: actions/checkout
+        uses: actions/checkout@v2.0.0
+      - name: actions/setup-node
+        uses: actions/setup-node@v1.4.1
         with:
-          directory: Pipelines/package-lock.json
-
-      - name: Install JS dependencies
-        run: npm install
-        
-      - uses: actions/setup-node@v3
-        with:
-          node-version: latest
-          cache: 'npm'
-          cache-dependency-path: Pipelines/package-lock.json
-      - run: npm ci
+          node-version: "13.9.0"
+      - name: npm install
+        uses: jaid/action-npm-install@v1.2.1
       
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
